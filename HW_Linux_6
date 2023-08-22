@@ -1,0 +1,21 @@
+		
+		
+		HW_Linux_6
+		sleeper.sh
+		#!/bin/bash
+
+	for run in {1..10}
+	do
+	date +"%H:%M:%S"
+	ps -ef | tail +2 | wc -l
+#	sleep 1s
+	done
+
+cat /proc/cpuinfo > /home/file.txt
+cat /etc/os-release | grep -w NAME | sed 's/NAME=//g' >> /home/file.txt
+
+	for i in {51..100}
+	do
+	touch /home/$i.txt
+	done
+echo "Finish"
